@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+/* Adjust the z-index of the navbar */
+.header-area {
+  z-index: 1000; /* Decrease the z-index if necessary */
+}
+
+/* Add padding to the top of the content area */
+.content-area {
+  padding-top: 70px; /* Adjust the padding to create space for the navbar */
+}
+
+.container {
+  margin-top: 200px;
+}
+.card {
+  height: 350px; /* Set a fixed height for the card */
+}
+
+.card-body {
+  height: 100%; /* Ensure the card body takes up full height of the card */
+
+}
+
+
+body {
+  background-color: black;
+  color: white;
+}

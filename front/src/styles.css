@@ -1,0 +1,20 @@
+ /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css'; 
+@import './assets/style/animate.css';
+@import './assets/style/flaticon.css';
+
+@import './assets/style/font-awesome.min.css';
+
+@import './assets/style/gijgo.css';
+
+@import './assets/style/magnific-popup.css';
+@import './assets/style/nice-select.css';
+@import './assets/style/slicknav.css';
+@import './assets/style/style.css';
+@import './assets/style/theme-default.css';
+@import './assets/style/themify-icons.css'; 
+@import 'ngx-toastr/toastr';
+
+
+
+

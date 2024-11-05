@@ -1,0 +1,67 @@
+
+
+<main id="main" class="main">
+    <div class="card">
+     
+      
+  
+        <!-- Multi Columns Form -->
+        <form class="row g-3" (ngSubmit)="modifierReclamation()" [formGroup]="BlocForm" >
+  
+            <div class="col-md-6">
+              <label for="inputCategorie" class="form-label">Type :</label>
+              <select class="form-control" formControlName="categorie">
+                <option value="negatif">negatif</option>
+                <option value="positif">positif</option>
+                <option value="neutre">neutre</option>
+                
+              </select>
+              <div *ngIf="validateField('categorie')" class="error-message">
+                  {{ getErrorMessage('categorie') }}
+              </div>
+            </div>
+  
+            <div class="col-md-6">
+              <label for="inputTitle" class="form-label">Name :</label>
+              <input type="text" class="form-control" formControlName="name">
+              <div *ngIf="validateField('name')" class="error-message">
+                  {{ getErrorMessage('name') }}
+                </div>
+                       </div>
+  
+                       <div class="col-md-6">
+                          <label for="inputTitle" class="form-label">Submission Date :</label>
+                          <input type="date" class="form-control" formControlName="dateSoumission">
+                          <div *ngIf="validateField('dateSoumission')" class="error-message">
+                              {{ getErrorMessage('dateSoumission') }}
+                          </div>
+                      </div>
+                      
+  
+            <div class="col-md-6">
+              <label for="inputDescription" class="form-label">Description:</label>
+              <textarea class="form-control" rows="3" formControlName="descriptionReclamation"></textarea>
+  
+              <div *ngIf="validateField('descriptionReclamation')" class="error-message">
+                  {{ getErrorMessage('descriptionReclamation') }}
+                </div>
+                        </div>
+  
+                     
+              
+           
+                     
+            
+                    
+          
+                  
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
+        </form><!-- End Multi Columns Form -->
+  
+      </div>
+  
+  </main>
+  

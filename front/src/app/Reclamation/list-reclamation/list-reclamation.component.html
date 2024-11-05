@@ -1,0 +1,26 @@
+<div class="container">
+  <!-- Barre de recherche -->
+  <div class="search-container mb-4">
+    <label class="d-flex">
+      <input type="search" placeholder="Search" class="form-control" [(ngModel)]="searchKeyword" (input)="searchReclamations()" />
+    </label>
+  </div>
+  
+  <!-- Cartes des réclamations -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let reclamation of reclamations">
+      <div class="card h-100">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">{{ reclamation.name }}</h5>
+          <p class="card-text">{{ reclamation.descriptionReclamation }}</p>
+          <p class="card-text">Type: {{ reclamation.categorie }}</p>
+          <p class="card-text">Submission Date: {{ reclamation.dateSoumission }}</p>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-danger" (click)="reclamation.id && deleteReclamation(reclamation.id)">Delete</button>
+            <button class="btn btn-primary" (click)="reclamation.id && modifierreclamation(reclamation.id)">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="chat-container" [ngClass]="{ show: showChat }">
+    <header class="chat-header">
+        <h4>Chat</h4>
+        <span class="close-btn" (click)="toggleChat()">&#10005;</span>
+    </header>
+    <div class="scroll-container">
+        <main class="chat-history">
+            <div *ngFor="let message of chatHistory">
+                <div [ngClass]="{'user-message': message.sender === 'user', 'bot-message': message.sender === 'bot'}">
+                    {{ message.message }}
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="chat-input">
+        <input type="text" id="message-input" placeholder="Type your message" [(ngModel)]="userText">
+        <button id="send-button" (click)="sendMessage()">Send</button>
+    </footer>
+</div>
+
+<div class="chat-bubble" (click)="toggleChat()" *ngIf="showBubble">
+    <i class="fa fa-comments"></i>
+</div>
