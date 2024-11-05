@@ -16,7 +16,7 @@ services:
       - mysql_data:/var/lib/mysql
 
   # Service pour l'application Spring Boot
-  bac:
+  back:
     image: azkhaled/back:latest  # Remplacez par l'image de votre application backend
     container_name: back
     environment:
