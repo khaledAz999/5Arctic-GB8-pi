@@ -16,9 +16,9 @@ services:
       - mysql_data:/var/lib/mysql
 
   # Service pour l'application Spring Boot
-  backend:
+  bac:
     image: azkhaled/back:latest  # Remplacez par l'image de votre application backend
-    container_name: backend
+    container_name: back
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/pi?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
       SPRING_DATASOURCE_USERNAME: root
