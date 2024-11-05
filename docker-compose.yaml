@@ -17,7 +17,7 @@ services:
 
   # Service pour l'application Spring Boot
   backend:
-    image: backend-image  # Remplacez par l'image de votre application backend
+    image: azkhaled/back:latest  # Remplacez par l'image de votre application backend
     container_name: backend
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/pi?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false
